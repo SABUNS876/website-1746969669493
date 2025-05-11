@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Modern Portfolio</title>
+<style>
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0f2027;  /* fallback for old browsers */
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    color: #4fc3f7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #81d4fa;
+  }
+
+  header {
+    padding: 2rem 1.5rem;
+    background-color: rgba(15, 32, 39, 0.85);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+    color: #81d4fa;
+  }
+  header p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #a0a0a0;
+  }
+
+  main {
+    flex: 1 0 auto;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+  section h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    border-left: 5px solid #81d4fa;
+    padding-left: 0.75rem;
+    margin-bottom: 1.25rem;
+    color: #b3e5fc;
+  }
+
+  .intro {
+    font-size: 1.25rem;
+    color: #d1d8e0;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
+  }
+
+  .project-card {
+    background: rgba(32, 58, 67, 0.8);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 15px rgba(13,52,66,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(33,150,243,0.5);
+  }
+
+  .project-card h3 {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #81d4fa;
+  }
+  .project-card p {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #cfd8dc;
+    margin-bottom: 1rem;
+  }
+  .project-card a.button {
+    align-self: flex-start;
+    background: #4fc3f7;
+    color: #022f40;
+    padding: 0.4rem 0.8rem;
+    font-weight: 700;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(79,195,247,0.5);
+    transition: background-color 0.3s ease;
+  }
+  .project-card a.button:hover {
+    background: #81d4fa;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .skills-list span {
+    background: #203a43;
+    color: #81d4fa;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(32,58,67,0.7);
+  }
+
+  footer {
+    background-color: rgba(15, 32, 39, 0.9);
+    color: #81d4fa;
+    text-align: center;
+    padding: 1.5rem;
+    font-weight: 400;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+    .project-card {
+      padding: 1rem;
+    }
+    .project-card h3 {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Alexandra Putri</h1>
+  <p>Frontend Developer & Designer</p>
+</header>
+<main>
+  <section class="intro">
+    <p>Hello! I'm Alexandra, a passionate frontend developer focused on building modern, responsive web experiences. I love turning ideas into beautiful and functional digital products.</p>
+  </section>
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <article class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A sleek personal portfolio to showcase my work, skills, and contact info with a modern UI design.</p>
+        <a class="button" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+      </article>
+      <article class="project-card">
+        <h3>Task Manager App</h3>
+        <p>A responsive web app to help users organize and track their daily tasks efficiently with real-time updates.</p>
+        <a class="button" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+      </article>
+      <article class="project-card">
+        <h3>Blog CMS</h3>
+        <p>A custom content management system built for blogging, featuring a clean editor and intuitive interface.</p>
+        <a class="button" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>JavaScript</span>
+      <span>React</span>
+      <span>Vue.js</span>
+      <span>Sass</span>
+      <span>Git</span>
+      <span>Responsive Design</span>
+    </div>
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <p>You can reach me via <a href="mailto:alexandra@example.com">alexandra@example.com</a> or follow me on <a href="https://twitter.com/alexandraputri" target="_blank" rel="noopener noreferrer">Twitter</a> and <a href="https://linkedin.com/in/alexandraputri" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+  </section>
+</main>
+<footer>
+  &copy; 2024 Alexandra Putri. All rights reserved.
+</footer>
+</body>
+</html>
+
+```
